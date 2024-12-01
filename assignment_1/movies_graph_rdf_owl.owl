@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://neo4j.com/voc/movies#"
+     xml:base="http://neo4j.com/voc/movies"
+     xmlns:mov="hhttp://neo4j.com/voc/movies#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://neo4j.com/voc/movies">
+        <rdfs:comment>A basic OWL ontology for Neo4j&apos;s movie database</rdfs:comment>
+        <rdfs:comment>Simple ontology providing basic vocabulary and domain+range axioms 
+	for the movie database.</rdfs:comment>
+        <rdfs:label>Neo4j&apos;s Movie Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://neo4j.com/voc/movies#ACTED_IN -->
+
+    <owl:ObjectProperty rdf:about="http://neo4j.com/voc/movies#ACTED_IN">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:range rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#DIRECTED -->
+
+    <owl:ObjectProperty rdf:about="http://neo4j.com/voc/movies#DIRECTED">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:range rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+        <rdfs:comment xml:lang="en">Director directed film</rdfs:comment>
+        <rdfs:label xml:lang="en">DIRECTED</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#PRODUCED -->
+
+    <owl:ObjectProperty rdf:about="http://neo4j.com/voc/movies#PRODUCED">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:range rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+        <rdfs:comment xml:lang="en">Producer produced film</rdfs:comment>
+        <rdfs:label xml:lang="en">PRODUCED</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#REVIEWED -->
+
+    <owl:ObjectProperty rdf:about="http://neo4j.com/voc/movies#REVIEWED">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:range rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#WROTE -->
+
+    <owl:ObjectProperty rdf:about="http://neo4j.com/voc/movies#WROTE">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:range rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+        <rdfs:comment xml:lang="en">Screenwriter wrote screenplay of</rdfs:comment>
+        <rdfs:label xml:lang="en">WROTE</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://neo4j.com/voc/movies#born -->
+
+    <owl:DatatypeProperty rdf:about="http://neo4j.com/voc/movies#born">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:comment xml:lang="en">A person&apos;s date of birth</rdfs:comment>
+        <rdfs:label xml:lang="en">born</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#name -->
+
+    <owl:DatatypeProperty rdf:about="http://neo4j.com/voc/movies#name">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Person"/>
+        <rdfs:comment xml:lang="en">A person&apos;s name</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#released -->
+
+    <owl:DatatypeProperty rdf:about="http://neo4j.com/voc/movies#released">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+        <rdfs:comment xml:lang="en">A film&apos;s release date</rdfs:comment>
+        <rdfs:label xml:lang="en">released</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#tagline -->
+
+    <owl:DatatypeProperty rdf:about="http://neo4j.com/voc/movies#tagline">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+        <rdfs:comment xml:lang="en">Tagline for a film</rdfs:comment>
+        <rdfs:label xml:lang="en">tagline</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#title -->
+
+    <owl:DatatypeProperty rdf:about="http://neo4j.com/voc/movies#title">
+        <rdfs:domain rdf:resource="http://neo4j.com/voc/movies#Movie"/>
+        <rdfs:comment xml:lang="en">The title of a film</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://neo4j.com/voc/movies#Movie -->
+
+    <owl:Class rdf:about="http://neo4j.com/voc/movies#Movie">
+        <rdfs:comment xml:lang="en">A film</rdfs:comment>
+        <rdfs:label xml:lang="en">Movie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://neo4j.com/voc/movies#Person -->
+
+    <owl:Class rdf:about="http://neo4j.com/voc/movies#Person">
+        <rdfs:comment xml:lang="en">Individual involved in the film industry</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
